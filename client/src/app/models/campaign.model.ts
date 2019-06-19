@@ -3,5 +3,8 @@ export class Campaign {
   campaignName: string;
   keywords: string;
   bidAmount: number;
-  //TODO: fields
+  campaignFund: number;
+  status: boolean;
+  town: string;
+  radius: number;
 }

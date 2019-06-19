@@ -3,22 +3,32 @@
 
   <table class="table table-striped">
     <thead>
-      <tr>
-        <th class="hidden">Id</th>
-        <th>FirstName</th>
-        <th>LastName</th>
-        <th>Email</th>
-        <th>Action</th>
-      </tr>
+    <tr>
+      <th>Name</th>
+      <th>Keywords</th>
+      <th>Bid Amount</th>
+      <th>Fund</th>
+      <th>Status</th>
+      <th>Town</th>
+      <th>Radius</th>
+      <th></th>
+    </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let campaign of campaigns">
-        <td class="hidden"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><button class="btn btn-danger" (click)="deleteCampaign(campaign)">Delete Campaign</button></td>
-      </tr>
+    <tr *ngFor="let campaign of campaigns">
+      <td>{{campaign.campaignName}}</td>
+      <td>{{campaign.keywords}}</td>
+      <td>{{campaign.bidAmount}}</td>
+      <td>{{campaign.campaignFund}}</td>
+      <td>{{campaign.status}}</td>
+      <td>{{campaign.town}}</td>
+      <td>{{campaign.radius}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteCampaign(campaign)">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </td>
+    </tr>
     </tbody>
   </table>
 </div>
