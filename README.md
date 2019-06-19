@@ -3,7 +3,7 @@
 - server: Spring Boot
 - client: Angular
 
-## Use Case
+### Use Case
 
 I want To be able to create, edit or delete a separate campaign for each of my products I want to sell
 Sellers to enter the following information for each campaign:
@@ -21,3 +21,11 @@ Sellers to enter the following information for each campaign:
 • Town (can pick from pre-populated dropdown list of towns)
 
 • Radius (mandatory in kilometres)
+
+### Articles, sources
+
+- https://start.spring.io/
+- https://www.devglan.com/spring-boot/spring-boot-angular-example
+- https://dzone.com/articles/integrate-h2-database-in-your-spring-boot-applicat
+
+
