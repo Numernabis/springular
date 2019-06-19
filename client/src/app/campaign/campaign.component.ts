@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Campaign } from '../models/campaign.model';
+import { CampaignService } from './campaign.service';
 
 @Component({
   selector: 'app-campaign',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CampaignComponent implements OnInit {
 
-  constructor() { }
+  campaigns: Campaign[];
+
+  constructor(private router: Router, 
+              private campaignService: CampaignService) {
+  }
 
   ngOnInit() {
-  }
+    this.campaignService.getCampaigns()
+      .subscribe( data => {
+        this.campaigns = data;
+      });
+  };
+
+  deleteCampaign(campaign: Campaign): void {
+    this.campaignService.deleteCampaign(campaign)
+      .subscribe( data => {
+        this.campaigns = this.campaigns.filter(c => c !== campaign);
+      })
+  };
+
 
 }
