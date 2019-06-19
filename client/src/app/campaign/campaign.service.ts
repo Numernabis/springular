@@ -15,16 +15,16 @@ export class CampaignService {
   //private campaignUrl = 'http://localhost:8080/springular/campaign';
   private apiUrl = '/api';
 
+  public createCampaign(campaign) {
+    return this.http.post<Campaign>(this.apiUrl, campaign);
+  }
+
   public getCampaigns() {
     return this.http.get<Campaign[]>(this.apiUrl);
   }
 
   public deleteCampaign(campaign) {
     return this.http.delete(this.apiUrl + "/"+ campaign.id);
-  }
-
-  public createCampaign(campaign) {
-    return this.http.post<Campaign>(this.apiUrl, campaign);
   }
 
 }

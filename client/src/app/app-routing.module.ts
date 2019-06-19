@@ -1,10 +1,22 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-const routes: Routes = [];
+import {CampaignComponent} from './campaign/campaign.component';
+import {AddCampaignComponent} from './campaign/add-campaign.component';
+
+const routes: Routes = [
+  {path: 'campaigns', component: CampaignComponent},
+  {path: 'add', component: AddCampaignComponent}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ],
+  declarations: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
