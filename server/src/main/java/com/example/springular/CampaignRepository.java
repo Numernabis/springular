@@ -10,7 +10,7 @@ public interface CampaignRepository extends Repository<Campaign, Integer> {
 
     List<Campaign> findAll();
 
-    Campaign findOne(int id);
+    Campaign findById(int id);
 
     Campaign save(Campaign campaign);
 }
