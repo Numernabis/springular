@@ -7,8 +7,8 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-//@RequestMapping({"/api"})
-@RequestMapping({"/campaigns"})
+@RequestMapping({"/api"})
+//@RequestMapping({"/campaigns"})
 public class CampaignController {
 
     @Autowired
