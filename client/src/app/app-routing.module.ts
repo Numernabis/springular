@@ -5,6 +5,7 @@ import {CampaignComponent} from './campaign/campaign.component';
 import {AddCampaignComponent} from './campaign/add-campaign.component';
 
 const routes: Routes = [
+  {path: '', component: CampaignComponent},
   {path: 'campaigns', component: CampaignComponent},
   {path: 'add', component: AddCampaignComponent}
 ];

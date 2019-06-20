@@ -8,6 +8,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {CampaignService} from './campaign/campaign.service';
 import {HttpClientModule} from "@angular/common/http";
 import {AddCampaignComponent} from './campaign/add-campaign.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AlertModule} from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {AddCampaignComponent} from './campaign/add-campaign.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    AlertModule.forRoot()
   ],
   providers: [CampaignService],
   bootstrap: [AppComponent]

@@ -10,15 +10,18 @@ import { CampaignService } from './campaign.service';
 export class AddCampaignComponent {
 
   campaign: Campaign = new Campaign();
+  successMessage: string;
 
   constructor(private router: Router,
               private campaignService: CampaignService) {
+    this.campaign.status = false;
   }
 
   createCampaign(): void {
     this.campaignService.createCampaign(this.campaign)
       .subscribe( data => {
-        alert("campaign created successfully.");
+        this.successMessage = "Campaign created successfully.";
+        setTimeout(() => this.successMessage = null, 3000);
       });
   };
 
