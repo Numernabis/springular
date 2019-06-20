@@ -10,12 +10,16 @@ import {HttpClientModule} from "@angular/common/http";
 import {AddCampaignComponent} from './campaign/add-campaign.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AlertModule} from 'ngx-bootstrap/alert';
+import {EditCampaignComponent} from "./campaign/edit-campaign.component";
+import { AsdComponent } from './asd/asd.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CampaignComponent,
-    AddCampaignComponent
+    AddCampaignComponent,
+    EditCampaignComponent,
+    AsdComponent
   ],
   imports: [
     BrowserModule,

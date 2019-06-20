@@ -1,0 +1,73 @@
+<div class="col-md-8">
+  <h3 class="text-center">Edit campaign</h3>
+
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="campaignName">Name:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="campaign.campaignName" name="campaignName"
+               class="form-control" id="campaignName">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="keywords">Keywords:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="campaign.keywords" name="keywords"
+               class="form-control" id="keywords">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="bidAmount">Bid amount:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="campaign.bidAmount" name="bidAmount"
+               class="form-control" id="bidAmount">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="campaignFund">Fund:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="campaign.campaignFund" name="campaignFund"
+               class="form-control" id="campaignFund">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="status">Status:</label>
+      <div class="col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input [(ngModel)]="campaign.status" name="status"
+                   type="checkbox" id="status">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="town">Town:</label>
+      <div class="col-sm-10">
+        <select [(ngModel)]="campaign.town" name="town"
+                class="form-control" id="town">
+          <option>Cracow</option>
+          <option>Warsaw</option>
+          <option>Zakopane</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="radius">Radius:</label>
+      <div class="col-sm-10">
+        <input [(ngModel)]="campaign.radius" name="radius"
+               onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')"
+               class="form-control" id="radius">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" (click)="updateCampaign()">Submit</button>
+      </div>
+    </div>
+
+    <alert *ngIf="successMessage" type="success"
+           (close)="successMessage = null">{{ successMessage }}</alert>
+  </form>
+</div>

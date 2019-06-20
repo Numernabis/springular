@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { Campaign } from '../models/campaign.model';
-import { CampaignService } from './campaign.service';
+import {Campaign} from '../models/campaign.model';
+import {CampaignService} from './campaign.service';
 
 @Component({
   templateUrl: './add-campaign.component.html'
@@ -19,7 +19,7 @@ export class AddCampaignComponent {
 
   createCampaign(): void {
     this.campaignService.createCampaign(this.campaign)
-      .subscribe( data => {
+      .subscribe(data => {
         this.successMessage = "Campaign created successfully.";
         setTimeout(() => this.successMessage = null, 3000);
       });

@@ -23,8 +23,16 @@ export class CampaignService {
     return this.http.get<Campaign[]>(this.apiUrl);
   }
 
+  public getCampaign(id: number) {
+    return this.http.get<Campaign>(this.apiUrl + '/' + id);
+  }
+
+  public updateCampaign(campaign) {
+    return this.http.put(this.apiUrl + '/' + campaign.id, campaign);
+  }
+
   public deleteCampaign(campaign) {
-    return this.http.delete(this.apiUrl + "/"+ campaign.id);
+    return this.http.delete(this.apiUrl + '/' + campaign.id);
   }
 
 }

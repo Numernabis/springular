@@ -24,7 +24,7 @@
       <td>{{campaign.town}}</td>
       <td>{{campaign.radius}}</td>
       <td>
-        <button class="btn btn-warning" routerLink="/edit/{{campaign.id}}">
+        <button class="btn btn-warning" [routerLink]="['/edit', campaign.id]">
           <span class="glyphicon glyphicon-edit"></span>
         </button>
         <button class="btn btn-danger" (click)="deleteCampaign(campaign)">

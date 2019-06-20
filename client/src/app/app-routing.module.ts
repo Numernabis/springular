@@ -3,11 +3,13 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {CampaignComponent} from './campaign/campaign.component';
 import {AddCampaignComponent} from './campaign/add-campaign.component';
+import {EditCampaignComponent} from "./campaign/edit-campaign.component";
 
 const routes: Routes = [
   {path: '', component: CampaignComponent},
   {path: 'campaigns', component: CampaignComponent},
-  {path: 'add', component: AddCampaignComponent}
+  {path: 'add', component: AddCampaignComponent},
+  {path: 'edit/:id', component: EditCampaignComponent}
 ];
 
 @NgModule({
