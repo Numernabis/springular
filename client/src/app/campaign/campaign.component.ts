@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 
 import {Campaign} from '../models/campaign.model';
 import {CampaignService} from './campaign.service';
-import {BsModalRef, BsModalService} from "ngx-bootstrap";
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-campaign',
@@ -25,15 +25,15 @@ export class CampaignComponent implements OnInit {
       .subscribe(data => {
         this.campaigns = data;
       });
-  };
+  }
 
   deleteCampaign(): void {
     this.campaignService.deleteCampaign(this.campaignToDelete)
       .subscribe(data => {
         this.campaigns = this.campaigns.filter(c => c !== this.campaignToDelete);
         this.modalRef.hide();
-      })
-  };
+      });
+  }
 
   openModal(template: TemplateRef<any>, campaign: Campaign) {
     this.campaignToDelete = campaign;

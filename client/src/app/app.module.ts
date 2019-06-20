@@ -6,12 +6,12 @@ import {AppComponent} from './app.component';
 import {CampaignComponent} from './campaign/campaign.component';
 import {AppRoutingModule} from './app-routing.module';
 import {CampaignService} from './campaign/campaign.service';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import {AddCampaignComponent} from './campaign/add-campaign.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AlertModule} from 'ngx-bootstrap/alert';
 import {ModalModule} from 'ngx-bootstrap/modal';
-import {EditCampaignComponent} from "./campaign/edit-campaign.component";
+import {EditCampaignComponent} from './campaign/edit-campaign.component';
 
 @NgModule({
   declarations: [
