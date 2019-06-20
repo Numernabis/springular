@@ -10,16 +10,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {AddCampaignComponent} from './campaign/add-campaign.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AlertModule} from 'ngx-bootstrap/alert';
+import {ModalModule} from 'ngx-bootstrap/modal';
 import {EditCampaignComponent} from "./campaign/edit-campaign.component";
-import { AsdComponent } from './asd/asd.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CampaignComponent,
     AddCampaignComponent,
-    EditCampaignComponent,
-    AsdComponent
+    EditCampaignComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,8 @@ import { AsdComponent } from './asd/asd.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [CampaignService],
   bootstrap: [AppComponent]

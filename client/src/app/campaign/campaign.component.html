@@ -20,18 +20,44 @@
       <td>{{campaign.keywords}}</td>
       <td>{{campaign.bidAmount}}</td>
       <td>{{campaign.campaignFund}}</td>
-      <td>{{campaign.status}}</td>
+      <td>
+        <template *ngIf="campaign.status;then icon_ok else icon_minus"></template>
+      </td>
       <td>{{campaign.town}}</td>
       <td>{{campaign.radius}}</td>
       <td>
-        <button class="btn btn-warning" [routerLink]="['/edit', campaign.id]">
+        <button class="btn btn-warning show-on-hover-content mr-10" [routerLink]="['/edit', campaign.id]">
           <span class="glyphicon glyphicon-edit"></span>
         </button>
-        <button class="btn btn-danger" (click)="deleteCampaign(campaign)">
+        <button class="btn btn-danger show-on-hover-content" (click)="openModal(template, campaign)">
           <span class="glyphicon glyphicon-trash"></span>
         </button>
       </td>
     </tr>
     </tbody>
   </table>
+
+  <ng-template #icon_ok>
+    <span class="glyphicon glyphicon-ok gi-15" aria-hidden="true"></span>
+  </ng-template>
+  <ng-template #icon_minus>
+    <span class="glyphicon glyphicon-minus gi-15" aria-hidden="true"></span>
+  </ng-template>
+
+  <ng-template #template>
+    <div class="modal-header">
+      <h5 class="modal-title pull-left">Are you sure?</h5>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <button class="btn btn-danger mr-10" (click)="deleteCampaign()">
+        Yes, delete campaign
+      </button>
+      <button class="btn btn-info" (click)="modalRef.hide()">
+        No
+      </button>
+    </div>
+  </ng-template>
 </div>
