@@ -1,18 +1,11 @@
 # Springular
 
-- server: Spring Boot
-- client: Angular
-
 ### Setup
 
 1. Clone repository: `git clone https://github.com/Numernabis/springular.git`
 2. Import separately _client_ and _server_ to IDE of your choice
-3. Server: run as Spring Application (default configuration)
-4. Client:
-```
-npm install
-npm start
-```
+3. Server: run as Spring Application (default configuration) or `mvn spring-boot:run`
+4. Client: `npm install && npm start`
 5. Open browser at `http://localhost:4200`
 
 ### Use Case
